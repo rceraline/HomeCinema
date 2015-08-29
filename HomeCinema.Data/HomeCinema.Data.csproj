@@ -56,6 +56,7 @@
     <Compile Include="Configurations\MovieConfiguration.cs" />
     <Compile Include="DbFactory.cs" />
     <Compile Include="Disposable.cs" />
+    <Compile Include="Extensions\UserExtensions.cs" />
     <Compile Include="HomeCinemaContext.cs" />
     <Compile Include="IDbFactory.cs" />
     <Compile Include="IUnitOfWork.cs" />
