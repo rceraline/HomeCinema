@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -126,22 +127,75 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\blank.gif" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\fancybox_overlay.png" />
+    <Content Include="Content\css\fancybox_sprite.png" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\jquery.fancybox.css" />
+    <Content Include="Content\css\loading-bar.css" />
+    <Content Include="Content\css\morris.css" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\css\toastr.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\background.jpg" />
+    <Content Include="Content\images\movies\antman.jpg" />
+    <Content Include="Content\images\movies\background.jpg" />
+    <Content Include="Content\images\movies\batmanvssuperman.jpg" />
+    <Content Include="Content\images\movies\betafish.jpg" />
+    <Content Include="Content\images\movies\edgeoftomorrow.jpg" />
+    <Content Include="Content\images\movies\fantasticfour.jpg" />
+    <Content Include="Content\images\movies\home.jpg" />
+    <Content Include="Content\images\movies\insideout.jpg" />
+    <Content Include="Content\images\movies\jurassicworld.jpg" />
+    <Content Include="Content\images\movies\madmax.jpg" />
+    <Content Include="Content\images\movies\minions.jpg" />
+    <Content Include="Content\images\movies\southpaw.jpg" />
+    <Content Include="Content\images\movies\spectre.jpg" />
+    <Content Include="Content\images\movies\ted2.jpg" />
+    <Content Include="Content\images\movies\thelongestride.jpg" />
+    <Content Include="Content\images\movies\thewalkingdead.jpg" />
+    <Content Include="Content\images\movies\trainwreck.jpg" />
+    <Content Include="Content\images\movies\truedetective.jpg" />
+    <Content Include="Content\images\movies\unknown.jpg" />
+    <Content Include="Content\images\movies\Wallpaper 8.png" />
+    <Content Include="Content\images\raty\star-half-big.png" />
+    <Content Include="Content\images\raty\star-half.png" />
+    <Content Include="Content\images\raty\star-off-big.png" />
+    <Content Include="Content\images\raty\star-off.png" />
+    <Content Include="Content\images\raty\star-on-big.png" />
+    <Content Include="Content\images\raty\star-on.png" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AutoFacWebApiConfig.cs" />
+    <Compile Include="App_Start\AutofacWebApiConfig.cs" />
+    <Compile Include="App_Start\Bootstrapper.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Extensions\RequestMessageExtensions.cs" />
+    <Compile Include="Infrastructure\MessageHandlers\HomeCinemaAuthHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\images\movies\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,11 +207,17 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\spa\" />
+    <Folder Include="Scripts\vendors\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HomeCinema.Data\HomeCinema.Data.csproj">
       <Project>{4BC6CD4C-750E-45AB-B3D1-F6447B7574AF}</Project>
       <Name>HomeCinema.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HomeCinema.Entities\HomeCinema.Entities.csproj">
+      <Project>{E65B4247-1680-4622-BEA0-228261BF831B}</Project>
+      <Name>HomeCinema.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\HomeCinema.Services\HomeCinema.Services.csproj">
       <Project>{EA7A3A06-B9CC-4585-BBBC-FB4EE67BFCC3}</Project>

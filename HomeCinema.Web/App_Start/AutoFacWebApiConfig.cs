@@ -9,7 +9,7 @@ using HomeCinema.Services;
 
 namespace HomeCinema.Web
 {
-    public class AutoFacWebApiConfig
+    public class AutofacWebApiConfig
     {
         public static IContainer Container { get; set; }
 
